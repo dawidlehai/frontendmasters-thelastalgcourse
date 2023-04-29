@@ -9,9 +9,10 @@ export default function bs_list(haystack: number[], needle: number): boolean {
 
     do {
         const mid = Math.floor(lo + (hi - lo) / 2);
-        if (haystack[mid] === needle) return true;
-        if (haystack[mid] > needle) hi = mid;
-        if (haystack[mid] < needle) lo = mid + 1;
+        const val = haystack[mid];
+        if (val === needle) return true;
+        if (val > needle) hi = mid;
+        if (val < needle) lo = mid + 1;
     } while (lo < hi);
 
     return false;
