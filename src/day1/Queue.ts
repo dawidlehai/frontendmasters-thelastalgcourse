@@ -39,7 +39,7 @@ export default class Queue<T> {
         // free-up space (not needed in JS)
         // head.next = undefined;
 
-        return head.value;
+        return head?.value;
     }
 
     peek(): T | undefined {
